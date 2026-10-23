@@ -13,7 +13,7 @@
 <helmet>
 <title>Fernway</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 html,body{margin:0;height:100%;overflow:hidden;background:#fff;font-family:Inter,system-ui,sans-serif;color:#151515}
 a{color:#1E3403}a:hover{color:#1E3403}
@@ -26,8 +26,8 @@ a{color:#1E3403}a:hover{color:#1E3403}
 </helmet>
 <div style="display:flex;flex-direction:column;height:100vh;width:100vw;overflow:hidden;background:#fff">
 
-  <header style="flex:none;height:30vh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px;padding:0 40px;box-sizing:border-box;text-align:center">
-    <span style="font-size:15px;font-weight:500;color:#979797;letter-spacing:0.01em">Step {{ step }} of 5</span>
+  <header style="flex:none;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:14px;padding:clamp(32px,6vh,72px) 40px 0;box-sizing:border-box;text-align:center">
+    <span style="font-size:15px;font-weight:500;color:#979797;letter-spacing:0.01em">Step {{ step }} of 6</span>
     <sc-if value="{{ c1 }}" hint-placeholder-val="{{ true }}">
       <h1 data-h1="1" style="margin:0;font-size:clamp(44px,3.7vw,64px);font-weight:500;letter-spacing:-0.045em;line-height:1.03;color:#151515">Click through it <span data-ak="1" style="position:relative;display:inline-block">once.</span></h1>
     </sc-if>
@@ -35,24 +35,28 @@ a{color:#1E3403}a:hover{color:#1E3403}
       <h1 data-h1="1" style="margin:0;font-size:clamp(44px,3.7vw,64px);font-weight:500;letter-spacing:-0.045em;line-height:1.03;color:#151515">Every click becomes a step viewers <span data-ak="1" style="position:relative;display:inline-block;white-space:nowrap">have to take.</span></h1>
     </sc-if>
     <sc-if value="{{ c3 }}" hint-placeholder-val="{{ false }}">
-      <h1 data-h1="1" style="margin:0;font-size:clamp(44px,3.7vw,64px);font-weight:500;letter-spacing:-0.045em;line-height:1.03;color:#151515"><span data-ak="1" style="position:relative;display:inline-block">Blur</span> what nobody should see.</h1>
+      <h1 data-h1="1" style="margin:0;font-size:clamp(44px,3.7vw,64px);font-weight:500;letter-spacing:-0.045em;line-height:1.03;color:#151515">Zoom in on the <span data-ak="1" style="position:relative;display:inline-block">detail</span> that matters.</h1>
     </sc-if>
     <sc-if value="{{ c4 }}" hint-placeholder-val="{{ false }}">
-      <h1 data-h1="1" style="margin:0;font-size:clamp(44px,3.7vw,64px);font-weight:500;letter-spacing:-0.045em;line-height:1.03;color:#151515">Zoom in on the <span data-ak="1" style="position:relative;display:inline-block">detail</span> that matters.</h1>
+      <h1 data-h1="1" style="margin:0;font-size:clamp(44px,3.7vw,64px);font-weight:500;letter-spacing:-0.045em;line-height:1.03;color:#151515"><span data-ak="1" style="position:relative;display:inline-block">Blur</span> what nobody should see.</h1>
     </sc-if>
     <sc-if value="{{ c5 }}" hint-placeholder-val="{{ false }}">
       <h1 data-h1="1" style="margin:0;font-size:clamp(44px,3.7vw,64px);font-weight:500;letter-spacing:-0.045em;line-height:1.03;color:#151515">Your narration becomes the <span data-ak="1" style="position:relative;display:inline-block">script.</span></h1>
     </sc-if>
+    <sc-if value="{{ c6 }}" hint-placeholder-val="{{ false }}">
+      <h1 data-h1="1" style="margin:0;font-size:clamp(44px,3.7vw,64px);font-weight:500;letter-spacing:-0.045em;line-height:1.03;color:#151515">Now capture your <span data-ak="1" style="position:relative;display:inline-block">own.</span></h1>
+    </sc-if>
   </header>
 
-  <div style="flex:1;min-height:0;display:flex;justify-content:center;padding:2.5vh 40px 4.5vh;box-sizing:border-box;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,0) 22%),url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E&quot;),radial-gradient(55% 90% at 8% 85%,rgba(250,221,118,.9),rgba(30,52,3,0) 70%),radial-gradient(50% 80% at 50% 60%,rgba(125,233,138,.9),rgba(125,233,138,0) 70%),radial-gradient(55% 90% at 94% 80%,rgba(112,204,244,.95),rgba(112,204,244,0) 70%),#F0FBF2">
+  <div style="flex:1;min-height:0;display:flex;justify-content:center;padding:44px 40px 4.5vh;box-sizing:border-box;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,0) 22%),url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E&quot;),radial-gradient(55% 90% at 8% 85%,rgba(250,221,118,.9),rgba(30,52,3,0) 70%),radial-gradient(50% 80% at 50% 60%,rgba(125,233,138,.9),rgba(125,233,138,0) 70%),radial-gradient(55% 90% at 94% 80%,rgba(112,204,244,.95),rgba(112,204,244,0) 70%),#F0FBF2">
     <div data-frame="1" style="position:relative;display:flex;flex-direction:column;width:min(100%,1360px);border-radius:18px;overflow:hidden;background:#fff;border:1px solid rgba(30,52,3,.14);box-shadow:0 28px 70px rgba(30,52,3,.22),0 2px 8px rgba(30,52,3,.08)">
       <div aria-hidden="true" style="flex:none;display:flex;align-items:center;gap:16px;height:44px;padding:0 18px;background:#fff;border-bottom:1px solid #e3ece7">
         <div style="display:flex;gap:7px"><span style="width:11px;height:11px;border-radius:50%;background:#dfe6e2"></span><span style="width:11px;height:11px;border-radius:50%;background:#dfe6e2"></span><span style="width:11px;height:11px;border-radius:50%;background:#dfe6e2"></span></div>
-        <div style="flex:1;display:flex;justify-content:center"><div data-addr="1" style="display:flex;align-items:center;gap:8px;width:min(100%,420px);height:28px;padding:0 14px;border-radius:8px;background:#f0f5f2;font-size:13px;color:#56665f;box-sizing:border-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>fernway.app</div></div>
+        <div style="flex:1;display:flex;justify-content:center"><div data-addr="1" style="display:flex;align-items:center;gap:8px;width:min(100%,420px);height:28px;padding:0 14px;border-radius:8px;background:#f0f5f2;font-size:13px;color:#56665f;box-sizing:border-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg><sc-if value="{{ notS6 }}" hint-placeholder-val="{{ true }}">fernway.app</sc-if><sc-if value="{{ c6 }}" hint-placeholder-val="{{ false }}">colossyan.com/features/screen-capture</sc-if></div></div>
         <div style="width:47px"></div>
       </div>
 
+      <sc-if value="{{ notS6 }}" hint-placeholder-val="{{ true }}">
       <div style="flex:1;min-height:0;display:grid;grid-template-columns:220px minmax(0,1fr)">
         <aside data-aside="1" aria-hidden="true" style="display:flex;flex-direction:column;gap:32px;padding:24px 16px;border-right:1px solid #e3ece7;background:#F0FBF2">
           <div style="display:flex;align-items:center;gap:8px;padding:0 8px;color:#1E3403">
@@ -116,8 +120,8 @@ a{color:#1E3403}a:hover{color:#1E3403}
             </div>
           </sc-if>
 
-          <sc-if value="{{ c3 }}" hint-placeholder-val="{{ false }}">
-            <div data-screen-label="03 Details" style="display:flex;flex-direction:column;gap:clamp(20px,3vh,32px)">
+          <sc-if value="{{ c4 }}" hint-placeholder-val="{{ false }}">
+            <div data-screen-label="04 Details" style="display:flex;flex-direction:column;gap:clamp(20px,3vh,32px)">
               <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;color:#6f817a">Travel expense</span><span style="font-size:28px;font-weight:600;letter-spacing:-0.03em;color:#1E3403">Lisbon, 12-14 Nov</span></div>
               <div data-card="1" class="fw-in" style="display:flex;flex-direction:column;gap:28px;width:min(100%,860px);padding:32px;border-radius:16px;background:#fff;border:1px solid #e3ece7;box-sizing:border-box">
                 <div aria-hidden="true" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px">
@@ -126,23 +130,23 @@ a{color:#1E3403}a:hover{color:#1E3403}
                   <div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:500;color:#6f817a">Home address</span><div style="display:flex;align-items:center;height:54px;padding:0 16px;border:1px solid #e3ece7;border-radius:10px;background:#f6faf8;font-size:18px;color:#1d2b26">Rua das Flores 28, 1200-195 Lisboa</div></div>
                   <div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:500;color:#6f817a">Trip</span><div style="display:flex;align-items:center;height:54px;padding:0 16px;border:1px solid #e3ece7;border-radius:10px;background:#f6faf8;font-size:18px;color:#1d2b26">Lisbon, 12-14 Nov</div></div>
                 </div>
-                <div data-ab="1" style="position:relative;align-self:flex-start;display:flex"><button onClick="{{ toS4 }}" style="min-width:220px;height:58px;padding:0 28px;border:0;border-radius:12px;background:#7DE98A;color:#1E3403;font:700 17px Inter,sans-serif;cursor:pointer">Attach receipt</button></div>
+                <div data-ab="1" style="position:relative;align-self:flex-start;display:flex"><button onClick="{{ toS5 }}" style="min-width:220px;height:58px;padding:0 28px;border:0;border-radius:12px;background:#7DE98A;color:#1E3403;font:700 17px Inter,sans-serif;cursor:pointer">Save details</button></div>
               </div>
             </div>
           </sc-if>
 
-          <sc-if value="{{ c4 }}" hint-placeholder-val="{{ false }}">
-            <div data-screen-label="04 Receipt" style="display:flex;align-items:stretch;gap:clamp(24px,3vw,44px)">
+          <sc-if value="{{ c3 }}" hint-placeholder-val="{{ false }}">
+            <div data-screen-label="03 Receipt" style="display:flex;align-items:stretch;gap:clamp(24px,3vw,44px)">
               <div aria-hidden="true" class="fw-in" style="flex:none;width:clamp(220px,20vw,320px);aspect-ratio:3/4;max-height:52vh;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#ffffff,#F0FBF2);border:1px solid #e3ece7;box-shadow:0 10px 30px rgba(30,52,3,.12)"><img src="assets/fernway/fw_receipt.png" alt="" aria-hidden="true" draggable="false" style="display:block;width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none"></div>
               <div data-col="1" class="fw-in2" style="flex:1;min-width:0;max-width:520px;display:flex;flex-direction:column;justify-content:center;gap:28px">
-                <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;color:#6f817a">Receipt scanned</span><span style="display:flex;align-items:center;gap:12px"><span style="font-size:28px;font-weight:600;letter-spacing:-0.03em;color:#1E3403">Zoom in on the detail that matters</span><span aria-hidden="true" style="display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;border-radius:8px;background:#7DE98A;color:#1E3403;font-size:13px;font-weight:700"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg>Scanned</span></span></div>
+                <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;color:#6f817a">Receipt scanned</span><span style="display:flex;align-items:center;gap:12px"><span style="font-size:28px;font-weight:600;letter-spacing:-0.03em;color:#1E3403;white-space:nowrap">Hotel Alfama</span><span aria-hidden="true" style="display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;border-radius:8px;background:#7DE98A;color:#1E3403;font-size:13px;font-weight:700"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg>Scanned</span></span></div>
                 <div aria-hidden="true" style="display:flex;flex-direction:column;padding:8px 22px;border-radius:14px;background:#fff;border:1px solid #e3ece7;font-size:14px;color:#4a5a54;font-variant-numeric:tabular-nums">
                   <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eef2f0"><span>Room, 2 nights</span><span>€236.00</span></div>
                   <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eef2f0"><span>City tax</span><span>€12.60</span></div>
                   <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eef2f0"><span>VAT (6%, included)</span><span>€13.36</span></div>
                   <div style="display:flex;justify-content:space-between;padding:12px 0;font-weight:600;color:#1d2b26"><span>Total</span><span>€248.60</span></div>
                 </div>
-                <div data-ab="1" style="position:relative;align-self:flex-start;display:flex"><button onClick="{{ toS5 }}" style="min-width:220px;height:58px;padding:0 28px;border:0;border-radius:12px;background:#7DE98A;color:#1E3403;font:700 17px Inter,sans-serif;cursor:pointer">Confirm €248.60</button></div>
+                <div data-ab="1" style="position:relative;align-self:flex-start;display:flex"><button onClick="{{ toS4 }}" style="min-width:220px;height:58px;padding:0 28px;border:0;border-radius:12px;background:#7DE98A;color:#1E3403;font:700 17px Inter,sans-serif;cursor:pointer">Confirm €248.60</button></div>
               </div>
             </div>
           </sc-if>
@@ -178,6 +182,17 @@ a{color:#1E3403}a:hover{color:#1E3403}
           </sc-if>
         </main>
       </div>
+      </sc-if>
+      <sc-if value="{{ c6 }}" hint-placeholder-val="{{ false }}">
+        <div data-screen-label="06 Install" style="flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:40px;background:#F5F4F2">
+          <div data-card="1" class="fw-in" style="display:flex;flex-direction:column;align-items:center;gap:20px;width:min(100%,540px);padding:48px 40px;border-radius:16px;background:#fff;border:1px solid #E8E8E8;text-align:center;box-sizing:border-box">
+            <img src="assets/colossyan-logo-black.svg" alt="Colossyan" style="display:block;height:26px;width:auto">
+            <h2 style="margin:0;font-family:'Bricolage Grotesque',Inter,sans-serif;font-weight:400;font-size:36px;letter-spacing:-1px;line-height:1.1;color:#151515;text-wrap:balance">Get Colossyan Screen Capture</h2>
+            <p style="margin:0;max-width:420px;font-size:17px;line-height:1.5;color:#505050;text-wrap:pretty">Free for Chrome and Edge. Click through any web app and get an interactive walkthrough.</p>
+            <div data-ab="1" style="position:relative;display:flex;margin-top:8px"><a href="https://chromewebstore.google.com/detail/colossyan-capture/ecamdjjijnikcgnimhkegpppceenhkjk" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-width:240px;height:56px;padding:0 28px;border-radius:8px;background:#252525;color:#fff;font:500 17px Inter,sans-serif;text-decoration:none">Add to Chrome, it's free</a></div>
+          </div>
+        </div>
+      </sc-if>
     </div>
   </div>
   <svg id="fw-arrows" aria-hidden="true" style="position:fixed;left:0;top:0;width:100vw;height:100vh;pointer-events:none;z-index:30;overflow:visible;transition:opacity .4s ease-out;opacity:{{ arOp }}"></svg>
@@ -187,7 +202,7 @@ a{color:#1E3403}a:hover{color:#1E3403}
 class Component extends DCLogic {
   state = { step: 1, sent: false };
   componentDidMount() {
-    this.onKey = e => { if (e.shiftKey && (e.key === 'R' || e.key === 'r')) this.setState({ step: 1, sent: false }, () => { this.drawnStep = 1; requestAnimationFrame(() => requestAnimationFrame(() => this.drawArrow())); }); };
+    this.onKey = e => { if (e.shiftKey && (e.key === 'R' || e.key === 'r')) clearTimeout(this.t6), this.setState({ step: 1, sent: false }, () => { this.drawnStep = 1; requestAnimationFrame(() => requestAnimationFrame(() => this.drawArrow())); }); };
     this.onResize = () => this.layoutArrow();
     window.addEventListener('keydown', this.onKey);
     window.addEventListener('resize', this.onResize);
@@ -199,7 +214,7 @@ class Component extends DCLogic {
   }
   componentWillUnmount() {
     window.removeEventListener('keydown', this.onKey); window.removeEventListener('resize', this.onResize);
-    clearTimeout(this.t1); clearTimeout(this.t2);
+    clearTimeout(this.t1); clearTimeout(this.t2); clearTimeout(this.t6);
   }
   drawArrow() {
     const svg = document.getElementById('fw-arrows'); if (!svg) return;
@@ -208,7 +223,7 @@ class Component extends DCLogic {
       p.setAttribute('fill', 'none'); p.setAttribute('stroke', '#151515'); p.setAttribute('stroke-width', '1');
       p.setAttribute('stroke-linecap', 'round'); p.setAttribute('stroke-linejoin', 'round'); p.setAttribute('pathLength', '1');
       p.style.strokeDasharray = '1 1'; p.style.strokeDashoffset = '1'; svg.appendChild(p); return p; };
-    if (this.state.step !== 1) return;
+    if (this.state.step !== 1 && this.state.step !== 6) return;
     this.arLine = mk(); this.arHead = mk();
     if (!this.layoutArrow()) return;
     if (matchMedia('(prefers-reduced-motion: reduce)').matches || !this.arLine.animate) { this.arLine.style.strokeDashoffset = '0'; this.arHead.style.strokeDashoffset = '0'; }
@@ -241,7 +256,7 @@ class Component extends DCLogic {
       c1 = P(Math.max(S.x + 60, Co.right + 40), f.top + 60); c2 = P(Co.right + 50, cy + 4); hook = 1;
     } else {
       const C = q('[data-card]').getBoundingClientRect();
-      S = P(k.right + 18, k.top + k.height * .62); E = P(b.right + 14, cy);
+      S = P(k.right + 34, k.top + k.height * .78); E = P(b.right + 14, cy);
       const xr = Math.max(C.right + 60, S.x + 40);
       c1 = P(xr, S.y + 60); c2 = P(xr, cy + 4); hook = 2;
     }
@@ -263,10 +278,10 @@ class Component extends DCLogic {
     const { step, sent } = this.state;
     const go = n => () => this.setState({ step: n }, () => { if (this.drawnStep !== n) { this.drawnStep = n; requestAnimationFrame(() => requestAnimationFrame(() => this.drawArrow())); } });
     return {
-      step, c1: step === 1, c2: step === 2, c3: step === 3, c4: step === 4, c5: step === 5,
+      step, c1: step === 1, c2: step === 2, c3: step === 3, c4: step === 4, c5: step === 5, c6: step === 6, notS6: step !== 6,
       toS2: go(2), toS3: go(3), toS4: go(4), toS5: go(5),
       sent, notSent: !sent, arOp: sent ? 0 : 1,
-      submit: () => this.setState({ sent: true })
+      submit: () => this.setState({ sent: true }, () => { clearTimeout(this.t6); this.t6 = setTimeout(() => this.setState({ step: 6, sent: false }), 1200); })
     };
   }
 }
